@@ -9,51 +9,65 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
         }
         header {
             text-align: center;
             padding: 50px 0;
         }
-        section {
-            padding: 40px;
-            background: #f8f9fa;
-            margin-bottom: 20px;
-        }
         h1 {
-            font-size: 36px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            animation: zoomIn 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .info-item {
             margin-bottom: 20px;
         }
-        h2 {
-            font-size: 24px;
+        .info-item h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info-item p {
+            margin: 0;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
             margin-bottom: 15px;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .objective {
-            margin-bottom: 30px;
-        }
-        .project {
-            margin-bottom: 30px;
-        }
-        .skill {
-            margin-bottom: 30px;
-        }
-        .course {
-            margin-bottom: 30px;
-        }
-        .experience {
-            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
         }
     </style>
 </head>
@@ -62,55 +76,62 @@
         <h1>Kalaivani Parthipan</h1>
     </header>
 
-    <section class="contact-info">
-        <div>
-            <h2>Contact Information</h2>
-            <p>Mobile No: 9360199208</p>
-            <p>Address: Coimbatore, Tamil Nadu</p>
-            <p>Email: kalaivani89730@gmail.com</p>
-            <p>Linkedin: <a href="https://www.linkedin.com/in/kalaivani-parthipan-aa0616218">linkedin.com/in/kalaivani-parthipan-aa0616218</a></p>
+    <div class="container">
+        <div class="info-item">
+            <h3>Mobile No:</h3>
+            <p>9360199208</p>
         </div>
-    </section>
+        <div class="info-item">
+            <h3>Address:</h3>
+            <p>Coimbatore, Tamil Nadu</p>
+        </div>
+        <div class="info-item">
+            <h3>E-Mail Id:</h3>
+            <p><a href="kalaivani89730@gmail.com"> kalaivani89730@gmail.com</a></p>
+        </div>
+        <div class="info-item">
+            <h3>Linkedin:</h3>
+            <p><a href="https://www.linkedin.com/in/kalaivani-parthipan-aa0616218" target="_blank">www.linkedin.com/in/kalaivani-parthipan-aa0616218</a></p>
+        </div>
 
-    <section class="objective">
-        <h2>Career Objectives</h2>
+        <div class="section-title">Career Objectives</div>
         <p>
             As a driven and technically proficient student specializing in Artificial Intelligence, adept in machine learning techniques and proficient in Python programming, I am seeking a challenging role where I can leverage my skills to contribute meaningfully to innovative projects. My objective is to apply my knowledge and passion for AI and machine learning in a dynamic environment that fosters continuous learning and growth. I am eager to collaborate with talented teams to solve complex problems and develop innovative solutions that have a real-world impact.
         </p>
-    </section>
 
-    <section class="academic-profile">
-        <h2>Academic Profile</h2>
+        <div class="section-title">Academic Profile</div>
         <table>
             <tr>
                 <th>Course</th>
-                <th>Institution/University</th>
+                <th>Institution</th>
+                <th>University</th>
                 <th>Year</th>
-                <th>Marks %</th>
+                <th>Marks%</th>
             </tr>
             <tr>
                 <td>B.Tech (AI & DS)</td>
                 <td>United Institute of Technology, Coimbatore</td>
+                <td>Anna University</td>
                 <td>2021 - 2025</td>
                 <td>86.5% (till 4th semester)</td>
             </tr>
             <tr>
                 <td>H.S.C</td>
                 <td>PSGR Krishnammal Higher Secondary School for Girls, Coimbatore</td>
+                <td>State Board</td>
                 <td>2021</td>
                 <td>92.5%</td>
             </tr>
             <tr>
                 <td>S.S.L.C</td>
                 <td>Periyanayaki Amman Matriculation Higher Secondary School, Coimbatore</td>
+                <td>State Board</td>
                 <td>2019</td>
                 <td>93.2%</td>
             </tr>
         </table>
-    </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
+        <div class="section-title">Projects</div>
         <ol>
             <li>
                 <h3>Image Classification using CNN - Brain Tumor Classification</h3>
@@ -131,29 +152,29 @@
                 </ul>
             </li>
         </ol>
-    </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <h3>Technical Skills:</h3>
-        <ul>
-            <li>Programming Languages: Python (Proficient), C (Intermediate)</li>
-            <li>Machine Learning: Scikit-Learn</li>
-            <li>Deep Learning: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)</li>
-            <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
-            <li>Database Management: SQL</li>
-        </ul>
-        <h3>Soft Skills:</h3>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Team Collaboration</li>
-            <li>Effective Communication</li>
-            <li>Time Management</li>
-        </ul>
-    </section>
+        <div class="section-title">Skills</div>
+        <div class="info-item">
+            <h3>Technical Skills:</h3>
+            <p>
+                Programming Languages: Python (Proficient), C (Intermediate)<br>
+                Machine Learning: Scikit-Learn<br>
+                Deep Learning: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)<br>
+                Data Analysis: Pandas, NumPy, Matplotlib<br>
+                Database Management: SQL
+            </p>
+        </div>
+        <div class="info-item">
+            <h3>Soft Skills:</h3>
+            <p>
+                Problem Solving<br>
+                Team Collaboration<br>
+                Effective Communication<br>
+                Time Management
+            </p>
+        </div>
 
-    <section class="courses">
-        <h2>Courses</h2>
+        <div class="section-title">Courses</div>
         <ul>
             <li>Data Analytics with Python - NPTEL</li>
             <li>Problem Solving through Programming in C - NPTEL</li>
@@ -161,14 +182,12 @@
             <li>Machine Learning - LinkedIn Learning</li>
             <li>Deep Learning - LinkedIn Learning</li>
         </ul>
-    </section>
 
-    <section class="experience">
-        <h2>Programming Experience</h2>
+        <div class="section-title">Programming Experience</div>
         <ul>
             <li>Python</li>
             <li>C</li>
         </ul>
-    </section>
+    </div>
 </body>
 </html>
