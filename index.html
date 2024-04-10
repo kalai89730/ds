@@ -1,20 +1,21 @@
+Here's a basic HTML/CSS template for an online portfolio based on the information you provided. This template is designed as a single-page layout, showcasing your personal details, career objectives, academic profile, projects, skills, courses, and programming experience.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalaivani P - Portfolio</title>
+    <title>Kalaivani Parthipan - Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #007bff;
-            color: #fff;
             text-align: center;
             padding: 50px 0;
         }
@@ -22,58 +23,82 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #007bff;
-        }
-        h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+        h1 {
+            font-size: 36px;
             margin-bottom: 20px;
         }
-        section {
-            margin-bottom: 40px;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
         }
         .contact-info {
-            list-style: none;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .skills ul {
+            list-style-type: none;
             padding: 0;
         }
-        .contact-info li {
-            margin-bottom: 10px;
+        .courses ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .programming-exp {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Kalaivani P - Portfolio</h1>
+        <h1>Kalaivani Parthipan</h1>
+        <div class="contact-info">
+            <p>Mobile No: 9360199208</p>
+            <p>Address: Coimbatore, TamilNadu</p>
+            <p>E-Mail: kalaivani89730@gmail.com</p>
+            <p>LinkedIn: <a href="www.linkedin.com/in/kalaivani-parthipan-aa0616218">kalaivani-parthipan</a></p>
+        </div>
     </header>
+
     <div class="container">
-        <section id="about">
-            <h2>About</h2>
-            <ul class="contact-info">
-                <li>Mobile No: 9360199208</li>
-                <li>Address: Coimbatore, Tamil Nadu</li>
-                <li>E-Mail: <a href="mailto:kalaivani89730@gmail.com">kalaivani89730@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/kalaivani-parthipan-aa0616218">Kalaivani Parthipan</a></li>
-            </ul>
-        </section>
-        
-        <section id="career-objective">
-            <h2>Career Objective</h2>
+        <section id="career-objective" class="section">
+            <h2 class="section-title">Career Objectives</h2>
             <p>As a passionate and dedicated third-year student pursuing B.Tech in Artificial Intelligence and Data Science at United Institute of Technology, I am eager to contribute to the Vision and AI Lab at the Indian Institute of Science as an intern. My academic background, hands-on projects, and programming experience align well with the lab's focus, and I am excited about the opportunity to apply my skills and further develop my expertise in the field.</p>
         </section>
-        
-        <section id="academic-profile">
-            <h2>Academic Profile</h2>
+
+        <section id="academic-profile" class="section">
+            <h2 class="section-title">Academic Profile</h2>
             <table>
                 <tr>
                     <th>Course</th>
                     <th>Institution/University</th>
                     <th>Year</th>
-                    <th>Marks%</th>
+                    <th>Marks %</th>
                 </tr>
                 <tr>
-                    <td>B.Tech (AI & DS)</td>
+                    <td>B.Tech (AI&DS)</td>
                     <td>United Institute of Technology, Coimbatore</td>
                     <td>2021 - 2025</td>
                     <td>86.5% (till 4th semester)</td>
@@ -92,68 +117,54 @@
                 </tr>
             </table>
         </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <ol>
-                <li>
-                    <strong>Image Classification using CNN - Brain Tumor Classification</strong>
-                    <ul>
-                        <li>Developed a Convolutional Neural Network (CNN) for accurate brain tumor classification.</li>
-                        <li>Implemented transfer learning techniques to enhance model performance.</li>
-                        <li>Utilized medical imaging datasets to train and validate the model.</li>
-                        <li>Achieved 87% accuracy in identifying brain tumors.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Movie Recommendation using Singular Value Decomposition (SVD)</strong>
-                    <ul>
-                        <li>Employed Singular Value Decomposition to create a collaborative filtering recommendation system.</li>
-                        <li>Cleaned and preprocessed a movie rating dataset to extract meaningful insights.</li>
-                        <li>Developed a recommendation model for personalized movie recommendations.</li>
-                        <li>Demonstrated the effectiveness of the model in enhancing accurate recommendation.</li>
-                    </ul>
-                </li>
-            </ol>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project">
+                <h3>Image Classification using CNN - Brain Tumor Classification</h3>
+                <ul>
+                    <li>Developed a Convolutional Neural Network (CNN) for accurate brain tumor classification.</li>
+                    <li>Implemented transfer learning techniques to enhance model performance.</li>
+                    <li>Utilized medical imaging datasets to train and validate the model.</li>
+                    <li>Achieved 87% accuracy in identifying brain tumors.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Movie Recommendation using Singular Value Decomposition (SVD)</h3>
+                <ul>
+                    <li>Employed Singular Value Decomposition to create a collaborative filtering recommendation system.</li>
+                    <li>Cleaned and preprocessed a movie rating dataset to extract meaningful insights.</li>
+                    <li>Developed a recommendation model for personalized movie recommendations.</li>
+                    <li>Demonstrated the effectiveness of the model in enhancing accurate recommendation.</li>
+                </ul>
+            </div>
         </section>
-        
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Technical Skills:</h3>
-            <ul>
-                <li>Programming Languages: Python (Proficient), C (Intermediate)</li>
-                <li>Machine Learning: Scikit-Learn</li>
-                <li>Deep Learning: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)</li>
-                <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
-                <li>Database Management: SQL</li>
-            </ul>
-            <h3>Soft Skills:</h3>
-            <ul>
-                <li>Problem Solving</li>
-                <li>Team Collaboration</li>
-                <li>Effective Communication</li>
-                <li>Time Management</li>
-            </ul>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <h3>Technical Skills:</h3>
+                <ul>
+                    <li>Programming Languages: Python (Proficient), C (Intermediate)</li>
+                    <li>Machine Learning: Scikit-Learn</li>
+                    <li>Deep Learning: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)</li>
+                    <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
+                    <li>Database Management: SQL</li>
+                </ul>
+                <h3>Soft Skills:</h3>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Team Collaboration</li>
+                    <li>Effective Communication</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
         </section>
-        
-        <section id="courses">
-            <h2>Courses</h2>
-            <ul>
-                <li>Data Analytics with Python - NPTEL</li>
-                <li>Problem Solving through Programming in C - NPTEL</li>
-                <li>Programming Data Structures and Algorithms using Python - NPTEL</li>
-                <li>Machine Learning - LinkedIn Learning</li>
-                <li>Deep Learning - LinkedIn Learning</li>
-            </ul>
-        </section>
-        
-        <section id="programming-experience">
-            <h2>Programming Experience</h2>
-            <ul>
-                <li>Python</li>
-                <li>C</li>
-            </ul>
-        </section>
-    </div>
-</body>
-</html>
+
+        <section id="courses" class="section">
+            <h2 class="section-title">Courses</h2>
+            <div class="courses">
+                <ul>
+                    <li>Data Analytics with Python - NPTEL</li>
+                    <li>Problem Solving through Programming in C - NPTEL</li>
+                    <li>Programming
